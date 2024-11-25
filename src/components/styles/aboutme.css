@@ -1,0 +1,18 @@
+.about-container {
+    width: 100%; /* Stretch container to fill parent width */
+    max-width: 1200px; /* Limit max width for consistency */
+    margin: 0 auto; /* Center horizontally */
+    padding: 1rem 2rem; /* Add inner spacing */
+    background-color: white; /* Ensure visible background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Depth effect */
+    text-align: center; /* Center text */
+}
+
+.h2-text {
+    font-family: 'Poetsen One', sans-serif; /* Stylized font */
+    text-align: center; /* Center the heading */
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive sizing */
+    color: #333; /* Darker text color */
+    margin: 0; /* Avoid extra spacing */
+}

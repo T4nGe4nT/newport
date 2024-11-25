@@ -1,0 +1,57 @@
+/* NavBar remains fixed */
+.mb-navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it stays on top */
+}
+
+/* Hero Header including About Divider */
+.hero-header {
+    width: 100%; /* Full width */
+    height: auto; /* Adjusts height to include AboutMe */
+    display: flex;
+    flex-direction: column; /* Stack header and AboutMe vertically */
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Clip overflowing animation elements */
+    background-color: transparent; /* Background for the hero section */
+}
+
+/* About Divider styling */
+.about-divider {
+    width: 100%; /* Match the width of the hero section */
+    padding: 1rem 0;
+    background-color: white; /* Background for contrast */
+    border-radius: 0; /* No rounding for full-width design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Add depth */
+    z-index: 5; /* Stay above hero animation if needed */
+}
+
+/* Wrapper for main body content */
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start;
+    width: 80%; /* Occupy 80% of the page width */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding-top: 2rem; /* Ensure spacing below the hero header */
+}
+
+/* Sections */
+.first-section,
+.second-section,
+.third-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Match wrapper width */
+    margin-bottom: 60px; /* Space between sections */
+}
+

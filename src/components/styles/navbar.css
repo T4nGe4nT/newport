@@ -1,0 +1,64 @@
+/* Navbar Styles */
+.full-nav-container {
+
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container.hide {
+    display: none;
+}
+
+.button-container.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .button-container {
+        display: none; /* Hide menu by default */
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

@@ -17,13 +17,14 @@ import ThirdSection from "@/components/ThirdSection.tsx";
 import Footer from "@/components/Footer.tsx"
 
 
+
 function MainBody() {
     return (
         <>
             <div className="mb-navbar">
                 <NavBar/>
             </div>
-            <div className="hero-header">
+            <div className="hero-header" id="header">
                 <Header/>
             </div>
             <div className="about-divider">
@@ -37,6 +38,7 @@ function MainBody() {
                 <div className="second-section">
                     <SecondSection/>
                 </div>
+
                 <Separator/>
                 <div className="third-section">
                     <ThirdSection/>

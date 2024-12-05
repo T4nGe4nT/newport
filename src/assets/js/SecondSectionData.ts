@@ -1,43 +1,43 @@
-//Image Imports
-import Cumulu from "../projects/CumuluCast.png"
-import Repay from "../projects/repaydemo.gif"
-import ToDo from"../projects/ToDoList.png"
-import Resto from "../projects/Restro.png"
+// Image Imports
+import Cumulu from "../projects/CumuluCast.png";
+import Repay from "../projects/repaydemo.gif";
+import ToDo from "../projects/ToDoList.png";
+import Resto from "../projects/Restro.png";
 
-interface SsDataItem {
-    id: number,
-    image: string,
-    text: string,
-    alt: string,
+// Define the Type for Data Items
+export interface SsDataItem {
+    id: number;
+    image: string;
+    text: string;
+    alt: string;
 }
 
-
-const ssData: SsDataItem[] =[
+// Define the Data Array
+const ssData: SsDataItem[] = [
     {
         id: 1,
         image: Repay,
-        text: "",
-        alt: "",
+        text: "Repay - A payment demo project.",
+        alt: "Repay Project Demo",
     },
     {
         id: 2,
         image: Cumulu,
-        text: "",
-        alt: "",
+        text: "CumuluCast - A weather forecasting app.",
+        alt: "CumuluCast Project",
     },
     {
         id: 3,
         image: ToDo,
-        text: "",
-        alt: "",
+        text: "ToDoList - An intuitive task management tool.",
+        alt: "ToDo List Project",
     },
     {
         id: 4,
         image: Resto,
-        text: "",
-        alt: "",
-    }
-
-]
+        text: "Restro - A restaurant management system.",
+        alt: "Restro Project",
+    },
+];
 
 export default ssData;

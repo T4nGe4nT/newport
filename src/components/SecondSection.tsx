@@ -1,63 +1,35 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+// Shad Import
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel.tsx";
 
-//CSS Import
+// Data imports
+import ssData, { ssDataItem } from "../assets/js/SecondSectionData.ts";
+
+// CSS Imports
 import "./styles/secondsection.css";
 
-//Data Import
-import ssData from "../assets/js/SecondSectionData.ts";
-
 function SecondSection() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextItem = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % ssData.length);
-    };
-
-    const prevItem = () => {
-        setCurrentIndex((prevIndex) =>
-            (prevIndex - 1 + ssData.length) % ssData.length
-        );
-    };
-
     return (
-        <div className="carousel-container">
-            <div className="carousel-item">
-                {ssData.map((item, index) => (
-                    <div
-                        key={item.id}
-                        className={`carousel-item-content ${
-                            index === currentIndex ? "active" : "inactive"
-                        }`}
-                    >
-                        {index === currentIndex && (
-                            <>
-                                <motion.img
-                                    className="img-carousel"
-                                    src={item.image}
-                                    alt={item.alt || `Slide ${index + 1}`}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                />
-                                <div className="carousel-text">
-                                    {item.text || `Slide ${index + 1} description`}
-                                </div>
-                            </>
-                        )}
-                    </div>
-                ))}
+        <>
+            <div className="car-container">
+                <Carousel className="car-content">
+                    <CarouselContent >
+                        {ssData.map((item: ssDataItem, index) => (
+                            <CarouselItem key={item.id} >
+                                <img src={item.image} alt={`Item ${index}`} />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </div>
-            <div className="carousel-controls">
-                <button onClick={prevItem} className="prev-button">
-                    Previous
-                </button>
-                <button onClick={nextItem} className="next-button">
-                    Next
-                </button>
-            </div>
-        </div>
+        </>
     );
 }
 

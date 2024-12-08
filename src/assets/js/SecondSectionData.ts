@@ -41,3 +41,8 @@ const ssData: SsDataItem[] = [
 ];
 
 export default ssData;
+
+export class ssDataItem {
+    image: string | undefined;
+    id: React.Key | null | undefined;
+}

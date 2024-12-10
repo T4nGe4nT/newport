@@ -50,25 +50,16 @@
     .header-container {
         max-height: 500px;
     }
-    .anime-text {
-        font-size: clamp(1.2rem, 4vw, 3rem); /* Smaller scaling */
-    }
 }
 
 @media (max-width: 600px) {
     .header-container {
         max-height: 450px;
     }
-    .anime-text {
-        font-size: clamp(1rem, 3vw, 2.5rem); /* Even smaller */
-    }
 }
 
 @media (max-width: 400px) {
     .header-container {
         max-height: 300px;
-    }
-    .anime-text {
-        font-size: clamp(0.9rem, 2.5vw, 2rem); /* Smallest size */
     }
 }

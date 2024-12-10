@@ -17,6 +17,9 @@ function SecondSection() {
     return (
         <>
             <div className="car-container">
+                <div className="car-title">
+                    <h2></h2>
+                </div>
                 <Carousel className="car-content">
                     <CarouselContent >
                         {ssData.map((item: ssDataItem, index) => (
@@ -25,6 +28,9 @@ function SecondSection() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
+                    <div className="car-desription">
+                        <p></p>
+                    </div>
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>

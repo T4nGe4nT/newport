@@ -1,11 +1,102 @@
+
+
 .car-container {
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center;
-    margin-top: 60px;
+    display: flex;
+    flex-direction: column; /* Stack the title, carousel, and description vertically */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center horizontally */
+    margin: 60px auto; /* Center horizontally and add vertical spacing */
+    padding: 20px; /* Add padding for better spacing */
+    max-width: 90%; /* Limit the container width for smaller screens */
+    background-color: #ffffff; /* Light background color */
+}
+
+.car-title h2 {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 10px; /* Slight rounding of edges */
+    padding: 1.5rem;
+    font-size: 2rem; /* Larger font size for the title */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 20px; /* Space between title and carousel */
+    color: #333333; /* Dark gray color */
+    text-align: center; /* Center align the text */
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.car-content, img {
+    width: 100%; /* Full width within the container */
+    max-width: 400px; /* Limit the maximum width */
+    border-radius: 10px; /* Slight rounding of edges */
 
 }
 
-.car-content {
-    max-width: 50%;
+.car-description {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 10px; /* Slight rounding of edges */
+    margin-top: 20px; /* Add spacing between carousel and description */
+    gap: 0.3rem; /* Space between words */
+    font-size: 1rem; /* Default font size */
+    line-height: 1.5;
+    padding: 1.5rem;
+    font-style: italic;
+    text-align: center; /* Center align the text */
+
+}
+
+button {
+    cursor: pointer; /* Change cursor to pointer for buttons */
+}
+
+/* Navigation Button Styling */
+button[disabled] {
+    opacity: 0.5; /* Make disabled buttons less visible */
+    cursor: not-allowed; /* Show not-allowed cursor */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .car-container {
+        margin: 30px 10px; /* Reduce margins on smaller screens */
+        padding: 10px; /* Adjust padding for smaller devices */
+    }
+
+    .car-title h2 {
+        font-size: 1.6rem; /* Slightly smaller font size for title */
+        padding: 8px; /* Adjust padding for better fit */
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .car-content, img {
+        max-width: 300px; /* Reduce max width for smaller screens */
+    }
+
+    .car-description {
+        font-size: 1rem; /* Adjust description font size */
+        padding: 8px; /* Adjust padding */
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+}
+
+@media (max-width: 480px) {
+    .car-container {
+        margin: 20px 5px; /* Further reduce margins for very small screens */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .car-title h2 {
+        font-size: 1.3rem; /* Smaller font size for very small screens */
+        padding: 6px; /* Adjust padding */
+        border-radius: 8px; /* Slightly smaller rounding */
+    }
+
+    .car-content, img {
+        max-width: 250px; /* Reduce max width for very small screens */
+        border-radius: 8px; /* Match smaller title rounding */
+    }
+
+    .car-description {
+        font-size: 0.9rem; /* Smaller description text */
+        padding: 6px; /* Adjust padding */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    }
 }

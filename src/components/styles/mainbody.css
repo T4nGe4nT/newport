@@ -45,7 +45,6 @@
 
 /* Sections */
 .first-section,
-.second-section,
 .third-section {
     display: flex;
     flex-direction: column;
@@ -55,3 +54,11 @@
     margin-bottom: 60px; /* Space between sections */
 }
 
+.second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Match wrapper width */
+    margin-bottom: 60px; /* Space between sections */
+}
